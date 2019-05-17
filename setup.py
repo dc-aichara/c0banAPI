@@ -2,7 +2,7 @@ from distutils.core import setup
 setup(
   name = 'c0banAPI',
   packages = ['c0banAPI'],
-  version = '01',
+  version = '1.1',
   license='MIT',
   description = 'c0banAPI will request c0ban blockchain insight api to get blocks and transactions related data',
   author = 'Dayal Chand Aichara',
@@ -14,7 +14,7 @@ setup(
           'requests',
       ],
   classifiers=[
-    'Development Status :: 3 - Alpha',
+    'Development Status :: 5 - Production/Stable',
     'Intended Audience :: Developers',
     'Topic :: Software Development :: Build Tools',
     'License :: OSI Approved :: MIT License',
