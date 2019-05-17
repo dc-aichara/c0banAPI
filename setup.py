@@ -12,8 +12,6 @@ setup(
   keywords = ['c0ban', 'blockchain', 'cryptocurrency, blocks'],
   install_requires=[
           'requests',
-          'json',
-          ''
       ],
   classifiers=[
     'Development Status :: 3 - Alpha',
