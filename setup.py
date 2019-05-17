@@ -8,7 +8,7 @@ setup(
   author = 'Dayal Chand Aichara',
   author_email = 'dc.aichara@gmail.com',
   url = 'https://github.com/dc-aichara/c0banAPI',
-  download_url = 'https://github.com/dc-aichara/c0banAPI/archive/v_01.tar.gz',
+  download_url = 'https://github.com/dc-aichara/c0banAPI/archive/v_01.1.tar.gz',
   keywords = ['c0ban', 'blockchain', 'cryptocurrency, blocks'],
   install_requires=[
           'requests',
