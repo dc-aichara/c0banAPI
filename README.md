@@ -8,7 +8,7 @@ c0banAPI is based on [c0ban insight](https://insight-beta.c0ban.com/) API.
 ```
 pip install c0banAPI
 ```
-### Source (Github)
+### From Source (Github)
 
 git clone https://github.com/dc-aichara/c0banAPI.git
 
@@ -24,7 +24,7 @@ c0ban = c0banAPI()
 ```
 
 ### Examples 
-
+The required parameters for each endpoint are defined as required (mandatory) parameters for the corresponding functions. 
 
 ```python
 >>> c0ban.get_block(1) # Input block height
