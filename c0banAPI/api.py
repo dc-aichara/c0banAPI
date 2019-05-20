@@ -25,6 +25,15 @@ class c0banAPI:
             return content
         except Exception as e:
             raise
+    def get_transaction_pages_of_address(self, wallet_address):
+
+        """Get number of pages of transactions of a wallet address"""
+
+        api_url = '{0}txs?address={1}'.format(self.api_base_url, wallet_address)
+        try:
+            return self.__request(api_url)["pagesTotal"]
+        except:
+            return print('Invalid wallet address. Please check wallet address again.')
 
     def get_transactions_of_address(self, wallet_address, max_page_num):
 
@@ -32,6 +41,24 @@ class c0banAPI:
 
         api_url = '{0}txs?address={1}&pageNum={2}'.format(self.api_base_url, wallet_address, max_page_num )
         return self.__request(api_url)["txs"]
+
+    def get_all_transactions_of_address(self, wallet_address):
+
+        """Get all transactions of a wallet address"""
+
+        # Get page numbers
+        api_url = '{0}txs?address={1}'.format(self.api_base_url, wallet_address)
+        try:
+            page_num = self.__request(api_url)["pagesTotal"]
+        except:
+            return print('Invalid wallet address. Please check wallet address again.')
+
+        # Get transactions
+        transactions =[]
+        for i in range(0, page_num):
+            api_url = '{0}txs?address={1}&pageNum={2}'.format(self.api_base_url, wallet_address, i)
+            transactions.append(self.__request(api_url)["txs"])
+        return transactions
 
     def get_txids_of_address(self, wallet_address):
 
@@ -104,16 +131,16 @@ class c0banAPI:
 
         """Get any block information by block height"""
 
+        # Get block hash
         api_url = '{0}block-index/{1}'.format(self.api_base_url, block_height)
 
         try:
-
             block_hash = self.__request(api_url)["blockHash"]
         except:
             api_url = '{}status?q=getInfo'.format(self.api_base_url)
             current_height = self.__request(api_url)["info"]["blocks"]
             return print('{0} block height not yet reached! Current block height is {1}.'.format(block_height, current_height))
-
+        # Get block
         api_url = '{0}block/{1}'.format(self.api_base_url, block_hash)
         return self.__request(api_url)
 
