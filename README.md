@@ -12,7 +12,7 @@ pip install c0banAPI
 
 git clone https://github.com/dc-aichara/c0banAPI.git
 
-cd 0banAPI
+cd c0banAPI
 
 python3 setup.py install
 
