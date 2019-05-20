@@ -10,9 +10,7 @@ setup(
   url = 'https://github.com/dc-aichara/c0banAPI',
   download_url = 'https://github.com/dc-aichara/c0banAPI/archive/v_01.1.tar.gz',
   keywords = ['c0ban', 'blockchain', 'cryptocurrency, blocks'],
-  install_requires=[
-          'requests',
-      ],
+  install_requires=['requests'],
   classifiers=[
     'Development Status :: 5 - Production/Stable',
     'Intended Audience :: Developers',
