@@ -18,7 +18,7 @@ python3 setup.py install
 
 ### Usage 
 
-```
+```python
 from c0banAPI import c0banAPI
 c0ban = c0banAPI()
 ```
