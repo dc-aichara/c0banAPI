@@ -1,7 +1,25 @@
-# c0banAPI
-c0banAPI python library can be use to obtain information of c0ban blockchain 
+# c0ban Insight API Wrapper
+c0banAPI is a c0ban Insight API wrapper which can be use to obtain information of c0ban blockchain 
 like transaction details, block details, difficulty, block height etc. 
-c0banAPI is based on original [c0ban insight api](https://insight-beta.c0ban.com/insight-api-c0ban/blocks).
+c0banAPI is based on original [c0ban insight](https://insight-beta.c0ban.com/) API.
 
-To install c0banAPI via pip use command
-```pip install c0banAPI```
+## Installation 
+### PyPI
+`pip install c0banAPI`
+### Source (Github)
+
+git clone https://github.com/dc-aichara/c0banAPI.git
+
+cd c0banAPI
+
+python3 setup.py install
+
+### Usage 
+
+`from c0banAPI import c0banAPI`
+
+`c0ban = c0banAPI()`
+
+### Examples 
+
+
