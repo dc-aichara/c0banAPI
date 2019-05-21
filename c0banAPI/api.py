@@ -47,6 +47,7 @@ class c0banAPI:
         """Get all transactions of a wallet address"""
 
         # Get page numbers
+
         api_url = '{0}txs?address={1}'.format(self.api_base_url, wallet_address)
         try:
             page_num = self.__request(api_url)["pagesTotal"]
@@ -54,6 +55,7 @@ class c0banAPI:
             return print('Invalid wallet address. Please check wallet address again.')
 
         # Get transactions
+
         transactions =[]
         for i in range(0, page_num):
             api_url = '{0}txs?address={1}&pageNum={2}'.format(self.api_base_url, wallet_address, i)
@@ -132,6 +134,7 @@ class c0banAPI:
         """Get any block information by block height"""
 
         # Get block hash
+
         api_url = '{0}block-index/{1}'.format(self.api_base_url, block_height)
 
         try:
@@ -140,7 +143,9 @@ class c0banAPI:
             api_url = '{}status?q=getInfo'.format(self.api_base_url)
             current_height = self.__request(api_url)["info"]["blocks"]
             return print('{0} block height not yet reached! Current block height is {1}.'.format(block_height, current_height))
+
         # Get block
+
         api_url = '{0}block/{1}'.format(self.api_base_url, block_hash)
         return self.__request(api_url)
 
@@ -159,6 +164,7 @@ class c0banAPI:
         return self.__request(api_url)["info"]["difficulty"]
 
     def get_block_difficullty(self, block_height):
+
         """Get block difficulty at desired block height"""
 
         api_url = '{0}block-index/{1}'.format(self.api_base_url, block_height)
@@ -173,6 +179,4 @@ class c0banAPI:
 
         api_url = '{0}block/{1}'.format(self.api_base_url, block_hash)
         return self.__request(api_url)['difficulty']
-
-
 
