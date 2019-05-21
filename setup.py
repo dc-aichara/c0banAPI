@@ -6,13 +6,13 @@ with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
 setuptools.setup(
   name = 'c0banAPI',
   packages = ['c0banAPI'],
-  version = '1.2',
+  version = '1.3',
   license='MIT',
   description = 'c0banAPI will request c0ban blockchain insight api to get blocks and transactions related data',
   author = 'Dayal Chand Aichara',
   author_email = 'dc.aichara@gmail.com',
   url = 'https://github.com/dc-aichara/c0banAPI',
-  download_url = 'https://github.com/dc-aichara/c0banAPI/archive/v_01.2.tar.gz',
+  download_url = 'https://github.com/dc-aichara/c0banAPI/archive/v_01.3.tar.gz',
   keywords = ['c0ban', 'blockchain', 'cryptocurrency, blocks'],
   install_requires=['requests'],
   classifiers=[
