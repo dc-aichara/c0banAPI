@@ -61,6 +61,12 @@ The required parameters for each endpoint are defined as required (mandatory) pa
 >>> c0ban.get_balance_of_address('8VgjdPKYUBS3QhB9z2ZMpu5D9kymavr4kK') # Input Wallet address
 518.0166468
 
+>>> c0ban.get_received_amount_of_address('8VgjdPKYUBS3QhB9z2ZMpu5D9kymavr4kK') # Input Wallet address
+92015.59196058
+
+>>> c0ban.get_sent_amount_of_address('8VgjdPKYUBS3QhB9z2ZMpu5D9kymavr4kK') # Input Wallet address
+91470.57925992
+
 >>> c0ban.get_transaction_pages_of_address('8VgjdPKYUBS3QhB9z2ZMpu5D9kymavr4kK') # Input wallet address
 9250
 
