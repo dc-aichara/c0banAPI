@@ -57,7 +57,7 @@ class c0banAPI:
         """
         Get all transactions of a wallet address"
         :param wallet_address: wallet address on c0ban blockchain (str)
-        :return: All transactions of given wallet address (json)
+        :return: All transactions of given wallet address (list)
         """
 
         # Get page numbers
@@ -131,7 +131,7 @@ class c0banAPI:
         """
         Get number of transactions of a particular wallet address
         :param wallet_address:wallet address on c0ban blockchain (str)
-        :return:
+        :return: list of transactions
         """
         api_url = '{0}addr/{1}'.format(self.api_base_url, wallet_address)
         try:
