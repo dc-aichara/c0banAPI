@@ -26,6 +26,8 @@ c0ban = c0banAPI()
 ### Examples 
 The required parameters for each endpoint are defined as required (mandatory) parameters for the corresponding functions. 
 
+- #### Blocks 
+
 ```python
 >>> c0ban.get_block(1) # Input block height
 {'hash': '000000004d2907c4e21c500a96f47a1a71e73f28be14f91326b554e5c7c20071',
@@ -55,6 +57,20 @@ The required parameters for each endpoint are defined as required (mandatory) pa
 >>> c0ban.get_latest_block_height() # No Input
 2108373
 
+>>> c0ban.get_transaction_count_of_block(239765)
+1
+
+>>> c0ban.get_block_reward(286)
+22000
+
+>>> c0ban.get_block_miner_address(1000000)
+'8PkGuJvKV7mGmpXrPp9AEGgKXKstZtVMsJ'
+
+```
+
+- #### Transactions
+
+```python
 >>> c0ban.get_transaction_count_of_address('8VgjdPKYUBS3QhB9z2ZMpu5D9kymavr4kK') # Input Wallet address
 92490
 
