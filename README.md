@@ -4,6 +4,7 @@ like transaction details, block details, difficulty, block height etc.
 c0banAPI is based on [c0ban insight](https://insight-beta.c0ban.com/) API.
 
 ***
+![](https://img.shields.io/badge/c0banAPI-1.4-blue)
 
 ## Installation 
 ### PyPI
