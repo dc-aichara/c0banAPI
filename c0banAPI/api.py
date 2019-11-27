@@ -9,7 +9,7 @@ class c0banAPI:
 
     __API_URL_BASE = 'https://insight-beta.c0ban.com/insight-api-c0ban/'
 
-    def __init__(self, api_base_url = __API_URL_BASE):
+    def __init__(self, api_base_url=__API_URL_BASE):
         self.api_base_url = api_base_url
         self.request_timeout = 120
 
@@ -19,7 +19,7 @@ class c0banAPI:
 
     def __request(self, url):
         try:
-            response = self.session.get(url, timeout = self.request_timeout)
+            response = self.session.get(url, timeout=self.request_timeout)
             response.raise_for_status()
             content = json.loads(response.content.decode('utf-8'))
             return content

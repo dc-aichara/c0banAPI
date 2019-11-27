@@ -1,7 +1,6 @@
-# c0ban Insight API Wrapper
-c0banAPI is a c0ban Insight API wrapper which can be use to obtain information of c0ban blockchain 
-like transaction details, block details, difficulty, block height etc. 
-c0banAPI is based on [c0ban insight](https://insight-beta.c0ban.com/) API.
+# c0banAPI
+c0banAPI is a python package to obtain  c0ban blockchain data and c0bantrade data. c0ban blockchain data are extracted 
+from [c0ban insight API](https://insight-beta.c0ban.com/insight/) and trading data are extracted from [c0bantrade](https://c0bantrade.jp/).
 
 ***
 ![](https://img.shields.io/badge/c0banAPI-1.4-blue)
@@ -23,13 +22,14 @@ python3 setup.py install
 
 ### Usage 
 
-```python
-from c0banAPI import c0banAPI
-c0ban = c0banAPI()
-```
-
-### Examples 
+### Examples: c0ban Blockchain Data [c0ban Insight API]
 The required parameters for each endpoint are defined as required (mandatory) parameters for the corresponding functions. 
+
+
+```python
+>>> from c0banAPI import c0banAPI
+>>> c0ban = c0banAPI()
+```
 
 - #### Blocks 
 
@@ -104,6 +104,96 @@ The required parameters for each endpoint are defined as required (mandatory) pa
 {'txid': 'e4af82c3dd374639f9f3019938093eff816d3146a92ba718d74dca65056f9e7d', 'version': 2, 'locktime': 0, 'vin': [{'txid': '6a2aa049c36203f9189184fa0abb26d14c5cc46aa6f6ad3f308e0ffeb5fbfe5c', 'vout': 0, 'sequence': 4294967295, 'n': 0, 'scriptSig': {'hex': '00473044022056d271db63beea77ce33f0368f593cca82e2f09bd0d22dd4f99f12b223a7fe57022045d811202a33f131c0574a7749d5397362f62d6036fd171d189f90127adeb7964147304402202e50405d01bb4a655432184dd3bd19aacdcd6d46bb0fa2f72ffeb5545eacc19602203b38b636dda973b261725de8621a5ae8112a8daa2eebbee4c0fd886ddbebcdff414c69522102eab867bc5210cb27fe02a026a23fa2ebe67107b42a33c9f30dc90bb4d5c005ea2103afb124bfdf49f53cdebb4838152a3a66b9e149a527fb89b90c67aaf8267305422102e7a601d3a76a385728cb8c1d59f96d0220232fab8a48f8beb7c0bb2196e1880353ae', 'asm': '0 3044022056d271db63beea77ce33f0368f593cca82e2f09bd0d22dd4f99f12b223a7fe57022045d811202a33f131c0574a7749d5397362f62d6036fd171d189f90127adeb796[ALL|FORKID] 304402202e50405d01bb4a655432184dd3bd19aacdcd6d46bb0fa2f72ffeb5545eacc19602203b38b636dda973b261725de8621a5ae8112a8daa2eebbee4c0fd886ddbebcdff[ALL|FORKID] 522102eab867bc5210cb27fe02a026a23fa2ebe67107b42a33c9f30dc90bb4d5c005ea2103afb124bfdf49f53cdebb4838152a3a66b9e149a527fb89b90c67aaf8267305422102e7a601d3a76a385728cb8c1d59f96d0220232fab8a48f8beb7c0bb2196e1880353ae'}, 'addr': 'Cepgw7st8GhRrKzp3ij5NjoUToGd5nYQtw', 'valueSat': 1478537150, 'value': 14.7853715, 'doubleSpentTxID': None}, {'txid': '41c831f3414410d0efe1412e2add396199f5bb2db0f25cdc5191f23d9c939785', 'vout': 0, 'sequence': 4294967295, 'n': 1, 'scriptSig': {'hex': '0047304402205e2224b1c19cdaad13bdf7ea77b43ff3522c27c6b9937be3bf5d35206b55726602201d59e0e22e844021913718da5956f0fbd001c30954b2c89f4f745da89d7e980341483045022100e93052e778f1651ff9fb797a48b1375b4c7f26cdd2f800e4dc4d917c5f82ed66022059d532fb913ef94bd74d2d3f3324ec56d528642218ff360ad07811d1f18255da414c69522102eab867bc5210cb27fe02a026a23fa2ebe67107b42a33c9f30dc90bb4d5c005ea2103afb124bfdf49f53cdebb4838152a3a66b9e149a527fb89b90c67aaf8267305422102e7a601d3a76a385728cb8c1d59f96d0220232fab8a48f8beb7c0bb2196e1880353ae', 'asm': '0 304402205e2224b1c19cdaad13bdf7ea77b43ff3522c27c6b9937be3bf5d35206b55726602201d59e0e22e844021913718da5956f0fbd001c30954b2c89f4f745da89d7e9803[ALL|FORKID] 3045022100e93052e778f1651ff9fb797a48b1375b4c7f26cdd2f800e4dc4d917c5f82ed66022059d532fb913ef94bd74d2d3f3324ec56d528642218ff360ad07811d1f18255da[ALL|FORKID] 522102eab867bc5210cb27fe02a026a23fa2ebe67107b42a33c9f30dc90bb4d5c005ea2103afb124bfdf49f53cdebb4838152a3a66b9e149a527fb89b90c67aaf8267305422102e7a601d3a76a385728cb8c1d59f96d0220232fab8a48f8beb7c0bb2196e1880353ae'}, 'addr': 'Cepgw7st8GhRrKzp3ij5NjoUToGd5nYQtw', 'valueSat': 2000669818, 'value': 20.00669818, 'doubleSpentTxID': None}], 'vout': [{'value': '34.79106968', 'n': 0, 'scriptPubKey': {'hex': 'a9143a0239a9e33d0abc8f17ec65c77ff294de79014187', 'asm': 'OP_HASH160 3a0239a9e33d0abc8f17ec65c77ff294de790141 OP_EQUAL', 'addresses': ['CMkcRnDYVtjkSCchGUVzW9hMAjiF6K4oJa'], 'type': 'scripthash'}, 'spentTxId': None, 'spentIndex': None, 'spentHeight': None}], 'blockhash': '5fb12e9a1f622cbc0905c9eb794be97353b056002b906182aea1eb25f92ca087', 'blockheight': 2107709, 'confirmations': 847, 'time': 1558299609, 'blocktime': 1558299609, 'valueOut': 34.79106968, 'size': 631, 'valueIn': 34.79206968, 'fees': 0.001}
 
 ```
+
+***
+
+### Examples: c0ban Trading Data [c0bantrade]
+
+```python
+>>> from c0banAPI import c0banTrade
+>>> trade = c0banTrade()
+
+```
+- #### Price and Volume
+
+```python
+>>> trade.mean_price()
+95.53
+>>> trade.ask_price()
+97.0
+>>> trade.bid_price()
+96.0
+>>> trade.price_spread()
+1.0
+>>> trade.percent_price_change_3h()
+0.07469907
+>>> trade.price_low_3h()
+95.0
+>>> trade.price_high_3h()
+98.0
+>>> trade.trading_volume_24h()
+225447.0
+>>> trade.quoted_volume_24h()
+21536951.91
+>>> trade.trading_price_volume_data()
+{'sell_compare': '',
+ 'buy_compare': '',
+ 'current_compare': '',
+ 'current_compare_sign': '',
+ 'current_compare_per': 0,
+ 'current_compare_price': '',
+ 'current_price': 95.53,
+ 'sell_price': '97.00000000',
+ 'buy_price': '96.00000000',
+ 'max_price': '98.00000000',
+ 'min_price': '95.00000000',
+ 'volume': '225447.00000000',
+ 'max_price_datetime': '2019-11-27 08:11:15.603000',
+ 'min_price_datetime': '2019-11-27 07:52:38.669000'
+}
+
+```
+
+- #### Order Book
+
+```python
+>>> df = trade.order_book()
+>>> df
+   seller_count  sell_order_sum    price_rate  buyer_count  buy_order_sum
+0           133          688427          OVER            0              0
+1             3            2350  103.00000000            0              0
+2             5            7850  102.00000000            0              0
+3             4           12000  101.00000000            0              0
+4            15           33768  100.00000000            0              0
+5            10           19692   99.00000000            0              0
+6             3            8908   98.00000000            0              0
+7             2            5050   97.00000000            0              0
+0             0               0   96.00000000            1             49
+1             0               0   95.00000000            3           1151
+2             0               0   94.00000000            2           1200
+3             0               0   93.00000000            4           3114
+4             0               0   92.00000000            5           5926
+5             0               0   91.00000000            6           5201
+6             0               0   90.00000000            7           6695
+7             0               0         UNDER           85         121140
+
+```
+
+- #### Transactions 
+
+```python
+>>> df = trade.trading_history()
+>>> df.head()
+                timestamp limit_business sell_buy  rate  volume  amount
+0 2019-11-27 10:55:33.383          limit     sell    96      49    4704
+1 2019-11-27 10:16:02.124       business     sell    97       8     776
+2 2019-11-27 10:16:02.124       business     sell    96      51    4896
+3 2019-11-27 10:15:52.494       business     sell    97      51    4947
+4 2019-11-27 10:01:50.596          limit     sell    97    6000  582000
+
+```
+
+***
 
 ### License 
 [MIT](https://choosealicense.com/licenses/mit/) © [Dayal Chand Aichara](https://github.com/dc-aichara)
