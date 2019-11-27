@@ -3,7 +3,7 @@ c0banAPI is a python package to obtain  c0ban blockchain data and c0bantrade dat
 from [c0ban insight API](https://insight-beta.c0ban.com/insight/) and trading data are extracted from [c0bantrade](https://c0bantrade.jp/).
 
 ***
-![](https://img.shields.io/badge/c0banAPI-1.4-blue)
+[![](https://img.shields.io/badge/c0banAPI-1.5-blue)]( https://github.com/dc-aichara/c0banAPI.git)
 
 ## Installation 
 ### PyPI
